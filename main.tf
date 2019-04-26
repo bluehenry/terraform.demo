@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "${var.region}"
 }
 
 # New resource for the S3 bucket our application will use.
