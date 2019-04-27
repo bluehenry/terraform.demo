@@ -51,6 +51,10 @@ After adding a new module to configuration, it is necessary to run (or re-run) t
 ```
 terraform init
 ```
+Get Module files
+```
+terraform get
+```
 
 #  Terraform Remote
 The backend section configures the backend you want to use. After configuring a backend, run terraform init to setup Terraform. It should ask if you want to migrate your state to Consul. Say "yes" and Terraform will copy your state.
