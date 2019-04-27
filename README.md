@@ -1,4 +1,4 @@
-# Getting started with AWS 
+# Getting started with Terraform 
 ## Installing Terraform
 [Installing Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html)
 ```
