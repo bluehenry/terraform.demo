@@ -63,3 +63,9 @@ Now, if you run terraform apply, Terraform should state that there are no change
 
 If you want to move back to local state, you can remove the backend configuration block from your configuration and run terraform init again. Terraform will once again ask if you want to migrate your state back to local.
 
+
+# Terrform import
+Some of AWS resources are importable.
+```
+terraform import
+```
