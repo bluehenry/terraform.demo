@@ -56,13 +56,27 @@ Get Module files
 terraform get
 ```
 
-#  Terraform Remote
+#  Terraform remote state
 The backend section configures the backend you want to use. After configuring a backend, run terraform init to setup Terraform. It should ask if you want to migrate your state to Consul. Say "yes" and Terraform will copy your state.
 
 Now, if you run terraform apply, Terraform should state that there are no changes.
 
 If you want to move back to local state, you can remove the backend configuration block from your configuration and run terraform init again. Terraform will once again ask if you want to migrate your state back to local.
 
+Backends do not support inerpolation, like variables.
+
+```
+terraform init --var-file="variable_file_path" --backend-config="bucket=aws_s3_backet_name"
+terraform apply (generation state file in s3)
+```
+
+# Workspaces
+[Worksapces](https://www.terraform.io/docs/state/workspaces.html)
+```
+terraform workspace new development
+terraform workspace list
+terraform workspace show
+```
 
 # Terrform import
 Some of AWS resources are importable.
