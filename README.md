@@ -73,9 +73,10 @@ terraform apply (generation state file in s3)
 # Workspaces
 [Worksapces](https://www.terraform.io/docs/state/workspaces.html)
 ```
-terraform workspace new development
+terraform workspace new workspace_name
 terraform workspace list
 terraform workspace show
+terraform workspace delete workspace_name
 ```
 
 # Terrform import
@@ -83,3 +84,7 @@ Some of AWS resources are importable.
 ```
 terraform import
 ```
+
+# Templates
+
+# Data sources
