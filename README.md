@@ -79,10 +79,11 @@ terraform workspace show
 terraform workspace delete workspace_name
 ```
 
-# Terrform import
+# Terraform import
 Some of AWS resources are importable.
 ```
-terraform import
+terraform import terraform_resource_type.resource_name aws_id
+terraform show
 ```
 
 # Templates
