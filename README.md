@@ -101,11 +101,6 @@ output "security_group_id" {
 }
 ```
 
-## Use an Output Value
-```
- security_group_ids = "${output.security_group_id}"
-```
-
 ## Command: output
 The terraform output command is used to extract the value of an output variable from the state file.
 ```
