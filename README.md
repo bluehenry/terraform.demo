@@ -85,7 +85,32 @@ Some of AWS resources are importable.
 terraform import terraform_resource_type.resource_name aws_id
 terraform show
 ```
+# Refresh
+The terraform refresh command is used to reconcile the state Terraform knows about (via its state file) with the real-world infrastructure. This can be used to detect any drift from the last-known state, and to update the state file.
 
+This does not modify infrastructure, but does modify the state file. If the state is changed, this may cause changes to occur during the next plan or apply.
+```
+terraform refresh
+```
+
+# Output Values
+## Declaring an Output Value
+```
+output "instance_ip_addr" {
+  value = aws_instance.server.private_ip
+}
+```
+
+## Use an Output Value
+```
+ ip_addr = "${output.instance_ip_addr}"
+```
+
+## Command: output
+The terraform output command is used to extract the value of an output variable from the state file.
+```
+terraform output
+```
 # Templates
 
 # Data sources
