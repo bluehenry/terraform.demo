@@ -96,14 +96,14 @@ terraform refresh
 # Output Values
 ## Declaring an Output Value
 ```
-output "instance_ip_addr" {
-  value = aws_instance.server.private_ip
+output "security_group_id" {
+  value = "${aws_security_group.my_security_group.id}"
 }
 ```
 
 ## Use an Output Value
 ```
- ip_addr = "${output.instance_ip_addr}"
+ security_group_ids = "${output.security_group_id}"
 ```
 
 ## Command: output
